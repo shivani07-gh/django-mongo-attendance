@@ -1,0 +1,36 @@
+{% extends 'studapp/base.html' %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="mb-4">📋 Attendance Management System</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-3">
+            <div class="card shadow">
+                <div class="card-body text-center">
+                    <h5>Add Student</h5>
+                    <a href="/add-student/" class="btn btn-primary mt-2">Go</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow">
+                <div class="card-body text-center">
+                    <h5>Mark Attendance</h5>
+                    <a href="/mark-attendance/" class="btn btn-success mt-2">Go</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow">
+                <div class="card-body text-center">
+                    <h5>View Records</h5>
+                    <a href="/view-attendance/" class="btn btn-warning mt-2">Go</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

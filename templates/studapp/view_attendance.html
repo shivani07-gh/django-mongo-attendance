@@ -1,0 +1,36 @@
+{% extends 'studapp/base.html' %}
+
+{% block content %}
+<div class="card shadow">
+    <div class="card-body">
+        <h3 class="text-center mb-3">Attendance Records</h3>
+
+        <table class="table table-bordered table-hover text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for r in records %}
+                <tr>
+                    <td>{{ r.student.name }}</td>
+                    <td>{{ r.date }}</td>
+                    <td>
+                        {% if r.is_present %}
+                            <span class="badge bg-success">Present</span>
+                        {% else %}
+                            <span class="badge bg-danger">Absent</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+
